@@ -1,0 +1,50 @@
+/**index.wxss**/
+.userMsg{
+  width: 100%;
+  position: fixed;
+  height: 45px;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+}
+.userMsg>view:nth-child(1){
+  height: 100%;
+  line-height: 45px;
+  width: 60px;
+  font-size: 14px;
+  color: rgba(128, 128, 128, 0.7);
+  text-align: center;
+}
+.ipt{
+  width: 100%;
+}
+.title{
+  width: 100%;
+  height: 50px;
+  background-color: aqua;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: 666;
+}
+/* AI的消息 */
+.assistant,.user{
+  margin: 15px 10px 15px 2px;
+  padding-bottom: 10px;
+  user-select: text;
+}
+.assistant>view:nth-child(2),.user>view:nth-child(2){
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+}
+.assistant>view:nth-child(1)>image,.user>view:nth-child(1)>image{
+  width: 30px;
+  height: 30px;
+  padding-left: 10px;
+}
+.user>view:nth-child(1){
+  text-align: right;
+  padding-right: 10px;
+}

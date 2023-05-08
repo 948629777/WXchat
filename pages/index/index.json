@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "wemark": "../../wemark/wemark/wemark",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+} 

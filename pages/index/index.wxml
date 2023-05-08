@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<!-- 弹出框 -->
+<van-dialog id="van-dialog" />
+<view class="userMsg">
+<view bindtap="clearHistory">
+  重置
+</view>
+  <van-cell-group class="ipt">
+  <van-field
+  type="textarea"
+  fixed
+  clearable
+    model:value="{{ userMsgValue }}"
+    placeholder="请输入消息"
+    border="{{ false }}"
+    use-button-slot
+  >
+  <van-button bindtap="getInfo" slot="button" size="small" type="primary">
+      发送
+    </van-button>
+  </van-field>
+</van-cell-group>
+</view>
+<view class="title">
+  聊天框
+</view>
+<scroll-view class="msgShow" bindscroll="onScroll" scroll-top="{{boxTop}}" style="height:{{scrollBoxHeight}}px;" scroll-y>
+  <view wx:for="{{messageList}}" wx:key="index" selectable="true">
+    <view class="user" wx:if="{{item.role==='user'}}">
+      <view>
+        <image src="/images/userIcon.png" mode=""/>
+      </view>
+      <view>
+        <wemark md="{{item.content}}" link highlight="true" type="wemark"></wemark>
+      </view>
+    </view>
+    <view class="assistant" wx:if="{{item.role==='assistant'}}">
+      <view>
+        <image src="/images/AIIcon.png" mode="" style=""/>
+      </view>
+      <view>
+        <wemark md="{{item.content}}" link highlight="true" type="wemark"></wemark>
+      </view>
+    </view>
+  </view>
+</scroll-view>
