@@ -42,7 +42,7 @@ wx.showLoading({
               messages: this.data.messageList
           }
   const res =await wx.$http.post('/v1/chat/completions',params)
-  console.log(res.data.choices[0].message);
+  console.log(res);
   let newArr = []
   for(var j=0;j<this.data.messageList.length;j++){
     newArr.push(this.data.messageList[j]) 
